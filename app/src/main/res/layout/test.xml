@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/backCardContainer"
+        android:layout_width="480dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/localTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="내국인"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/classNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="2종보통"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/backProfileImage"
+                android:layout_width="150dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/localTitle" />
+
+            <TextView
+                android:id="@+id/cardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                app:layout_constraintStart_toEndOf="@id/backProfileImage"
+                app:layout_constraintTop_toTopOf="@id/backProfileImage"
+                tools:text="14-16-216316-71" />
+
+            <TextView
+                android:id="@+id/backNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/cardNumber"
+                app:layout_constraintTop_toBottomOf="@id/cardNumber"
+                tools:text="홍길동" />
+
+            <TextView
+                android:id="@+id/birthdayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="생 년 월 일"
+                android:textAlignment="viewStart"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/backNickName"
+                app:layout_constraintTop_toBottomOf="@id/backNickName" />
+
+            <TextView
+                android:id="@+id/backBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/birthdayTitle"
+                app:layout_constraintStart_toEndOf="@id/birthdayTitle"
+                app:layout_constraintTop_toTopOf="@id/birthdayTitle"
+                tools:text="1998.04.10" />
+
+            <TextView
+                android:id="@+id/sexTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="성별"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@id/backBirthday"
+                app:layout_constraintTop_toTopOf="@id/birthdayTitle" />
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="남"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/sexTitle"
+                app:layout_constraintStart_toEndOf="@id/sexTitle"
+                app:layout_constraintTop_toTopOf="@id/sexTitle" />
+
+            <TextView
+                android:id="@+id/renewalTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="적검/갱신\n기          간"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/birthdayTitle"
+                app:layout_constraintTop_toBottomOf="@id/birthdayTitle" />
+
+            <TextView
+                android:id="@+id/renewal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/renewalTitle"
+                app:layout_constraintStart_toEndOf="@id/renewalTitle"
+                app:layout_constraintTop_toTopOf="@id/renewalTitle"
+                tools:text="2026.01.01 ~ 2026.12.31" />
+
+            <TextView
+                android:id="@+id/idNumberTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="식 별 번 호"
+                android:textAlignment="viewStart"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/renewalTitle"
+                app:layout_constraintTop_toBottomOf="@id/renewalTitle" />
+
+            <TextView
+                android:id="@+id/idNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/idNumberTitle"
+                app:layout_constraintStart_toEndOf="@id/idNumberTitle"
+                app:layout_constraintTop_toTopOf="@id/idNumberTitle"
+                tools:text="VD6VPO" />
+
+            <TextView
+                android:id="@+id/backDateOfIssueTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="발    급    일"
+                android:textAlignment="viewStart"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/idNumberTitle"
+                app:layout_constraintTop_toBottomOf="@id/idNumberTitle" />
+
+            <TextView
+                android:id="@+id/backDateOfIssue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/backDateOfIssueTitle"
+                app:layout_constraintStart_toEndOf="@id/backDateOfIssueTitle"
+                app:layout_constraintTop_toTopOf="@id/backDateOfIssueTitle"
+                tools:text="1998.04.10" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이전" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
